@@ -14,7 +14,15 @@
         <title>FQ&A's</title>
         <link rel="stylesheet" type="text/css" media="screen" href=""/>
         <link href="https://fonts.googleapis.com/css?family=canto pen" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
+    <script> 
+$(document).ready(function(){
+  $(".collapsible").click(function(){
+    $(this).next(".content").slideToggle("slow");
+  });
+});
+</script>
     <style>
         .collapsible {
             margin-left: 15%;
@@ -30,7 +38,7 @@
             text-align: left;
             outline: none;
             font-size: 25px;
-            transition: all 1s;
+            transition: all .6s;
         }
         .active, .collapsible:hover {
             background-color:rgb(214, 174, 72);
@@ -137,21 +145,5 @@
                 of the preferences you can opt for to still allow for beautiful bonding with your baby. 
             </div>
         </div>
-        <script>
-                var coll = document.getElementsByClassName("collapsible");
-                var i;
-                
-                for (i = 0; i < coll.length; i++) {
-                  coll[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                      content.style.display = "none";
-                    } else {
-                      content.style.display = "block";
-                    }
-                  });
-                }
-        </script>
     </body>
 </html>
